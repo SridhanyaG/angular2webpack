@@ -1,0 +1,46 @@
+{
+  "name": "angular2webpack",
+  "version": "1.0.0",
+  "description": "Angular2 Hello world example with webpack configuration",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf node_modules && npm cache clean",
+    "lint": "tslint --force \"src/**/*.ts\"",
+    "postinstall": "typings install && npm run tsc",
+    "tsc": "tsc -p .",
+    "tsc:w": "tsc -p . -w",
+    "start": "webpack-dev-server --inline --colors --watch --display-error-details --display-cached  --port 3001 --hot",
+    "karmaserverw": "karmaserverw",
+    "watchtest": "tsc && concurrently \"npm run tsc:w\" \"npm run karmaserverw\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SridhanyaG/angular2webpack.git"
+  },
+  "author": "SridhanyaG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SridhanyaG/angular2webpack/issues"
+  },
+  "homepage": "https://github.com/SridhanyaG/angular2webpack#readme",
+  "dependencies": {
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "@angular/core": "^2.0.0-rc.4",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/platform-browser-dynamic": "^2.0.0-rc.4",
+    "@angular/router": "^3.0.0-beta.2",
+    "es6-shim": "^0.35.1",
+    "reflect-metadata": "^0.1.3",
+    "rimraf": "^2.5.4",
+    "rxjs": "^5.0.0-beta.6",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^2.1.0",
+    "core-js": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-coverage": "^1.1.0"
+  }
+}
