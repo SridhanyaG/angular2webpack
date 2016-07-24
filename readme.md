@@ -1,14 +1,12 @@
-npm install --global webpack
-npm install --global webpack-dev-server
-npm install --global karma-cli
-npm install --global typescript 
-npm install --global typings
-npm init
-tsc --init --target es5 --sourceMap --experimentalDecorators --emitDecoratorMetadata
-typings init
-npm install <name>--save
-npm install <name>--save-dev
+angular2webpack
 
-typings install es6-shim --ambient --save
 
+It is a angular2 rc4 starter template with webpack for module loader.
+
+>git clone https://github.com/SridhanyaG/angular2webpack
+>npm install
+>npm run clean
+>npm run compile
+>npm start
+>npm test
 
